@@ -5,6 +5,7 @@ http://xiaoxumeng1993.wixsite.com/xiaoxumeng/my-auto-panorama
 Next, introduct the functions in this project.
 
 ANMS.m
+
 The aim of this step is to detect corners spread all across the image to avoid weird artifacts in warping.
 
 Firstly, detect corner features in the image using cornermetric with the appropriate parameters. The output is a matrix of corner scores. The higher the value, the higher the score/probability of that pixel being a corner.
@@ -28,40 +29,64 @@ end
 4. Sort ri in descending order and pick top Nbest points.
 
 apply_homography.m
+
 Use homogrphay matrix H to compute position (x,y) in the source image to the position (X,Y) in the destination image.
 
+
 chooseMatchPoint2.m
+
 Use this program to filter the features which are on teh corners or edges of the image.
 
+
 cylProj.m
+
 Make cylindrical projection for the iamges.
 
+
 DispMatchedFeatures.m
+
 Displays images I1 and I2 using the visualization style specified by method.
 
+
 est_homography.m
+
 Compute the homography matrix from source(x,y) to destination(X,Y)
+
 
 getCylCoord.m
 Get the coordinates for image after cylindrical projection.
 
 getFeature.m
+
 Extract features of images.
 
+
 guasFilter.m
+
 Use Gaussian method to fill the black regions in the panorama.
 
+
 matchFeature.m
+
 Use RANSAC to match the features.
 
+
 RANSAC_newnew.m
+
 Use RANSAC to find the tranformation matrix between two images.
 
+
 stitchImg.m
+
 The main pipeline to make panorama.
 
+
 testWrapper.m
+
 Testfile. the inputs are the path of images, the output is panorama.
 
+
 Wrapper.m
+
 Deal with the different situations of testWrapper.m and call stitchImg.m to make panorama
+
